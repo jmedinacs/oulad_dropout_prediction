@@ -38,6 +38,7 @@ requirements.txt~
 /data/
 # Or, if using a Python subfolder for data (adjust accordingly)
 python_work/data/
+python/data/
 
 # Ignore database files, but not globally (narrow the scope!)
 # Comment this out if you need to track specific .db files:
