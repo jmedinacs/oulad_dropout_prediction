@@ -1,0 +1,40 @@
+# Ignore system and IDE clutter
+*.log
+*.DS_Store
+Thumbs.db
+.vscode/
+__pycache__/
+.ipynb_checkpoints/
+
+# Python artifacts
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv/
+env/
+venv/
+requirements.txt~
+
+# Jupyter checkpoint files
+.ipynb_checkpoints/
+
+# Raw data files (optional: commit if small and necessary)
+data/csv/
+data/raw/
+
+# SQLite database (optional: comment this out if committing)
+data/oulad_drop.db
+
+# Tableau temp files or screenshots
+*.twb~
+*.twbx~
+tableau/charts/*.png
+
+# OS-specific files
+ehthumbs.db
+Icon?
+
+# Backup files
+*.bak
+*.tmp
