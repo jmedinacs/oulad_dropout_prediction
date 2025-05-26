@@ -1,12 +1,18 @@
-# Ignore system and IDE clutter
+# ------------------------
+# System and IDE Clutter
+# ------------------------
 *.log
 *.DS_Store
 Thumbs.db
+ehthumbs.db
+Icon?
 .vscode/
-__pycache__/
-.ipynb_checkpoints/
+.idea/
 
-# Python artifacts
+# ------------------------
+# Python Artifacts
+# ------------------------
+__pycache__/
 *.pyc
 *.pyo
 *.pyd
@@ -14,27 +20,35 @@ __pycache__/
 .venv/
 env/
 venv/
+*.ipynb_checkpoints
 requirements.txt~
 
-# Jupyter checkpoint files
+# ------------------------
+# Jupyter Checkpoints
+# ------------------------
 .ipynb_checkpoints/
 
-# Raw data files (optional: commit if small and necessary)
-data/csv/
-data/raw/
+# ------------------------
+# Data Files (exclude raw and large data)
+# ------------------------
+*.db               # Ignore all .db files globally (SQLite, etc.)
+*.sqlite
+*.sqlite3
+*.db3
+*.mdb
 
-# SQLite database (optional: comment this out if committing)
-data/oulad_drop.db
+data/csv/          # Optional: ignore raw CSVs if not needed in repo
+data/raw/          # Optional: ignore raw data files
 
-# Tableau temp files or screenshots
+# ------------------------
+# Tableau Artifacts
+# ------------------------
 *.twb~
 *.twbx~
 tableau/charts/*.png
 
-# OS-specific files
-ehthumbs.db
-Icon?
-
-# Backup files
+# ------------------------
+# Backup Files
+# ------------------------
 *.bak
 *.tmp
