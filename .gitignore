@@ -8,6 +8,8 @@ ehthumbs.db
 Icon?
 .vscode/
 .idea/
+.project
+.pydevproject
 
 # ------------------------
 # Python Artifacts
@@ -29,16 +31,26 @@ requirements.txt~
 .ipynb_checkpoints/
 
 # ------------------------
-# Data Files (exclude raw and large data)
+# Data Files (Exclude raw, large files - Scoped per folder)
 # ------------------------
-*.db               # Ignore all .db files globally (SQLite, etc.)
-*.sqlite
-*.sqlite3
-*.db3
-*.mdb
 
-data/csv/          # Optional: ignore raw CSVs if not needed in repo
-data/raw/          # Optional: ignore raw data files
+# Ignore only the top-level data folder, not all data/ in any subfolder
+/data/
+# Or, if using a Python subfolder for data (adjust accordingly)
+python_work/data/
+
+# Ignore database files, but not globally (narrow the scope!)
+# Comment this out if you need to track specific .db files:
+# *.db
+# *.sqlite
+# *.sqlite3
+# *.db3
+# *.mdb
+
+# ------------------------
+# Models and Artifacts
+# ------------------------
+models/
 
 # ------------------------
 # Tableau Artifacts
