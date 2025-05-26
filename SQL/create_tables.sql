@@ -1,7 +1,7 @@
 -- =================================================
 -- Title        : Dropout Prediction Schema
 -- Author       : John Medina
--- Created On   : 2025-05-22
+-- Created On   : May 22, 2025
 -- Description  : Creates the tables used for dropout prediction analysis,
 --                including studentInfo, studentRegistration, studentVle,
 --                courses, and vle.

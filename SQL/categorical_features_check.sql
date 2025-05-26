@@ -161,3 +161,26 @@ SELECT
 FROM oulad_vle
 GROUP BY activity_type
 ORDER BY count DESC;
+
+
+-- =====================================================
+-- EDA STEP: Inspect for ordinality instead of continuous
+-- =====================================================
+
+SELECT 
+    module_presentation_length, 
+    COUNT(*) AS count,
+    ROUND(100.0 * COUNT(*) / (SELECT COUNT(*) FROM course_summary), 2) AS percentage
+FROM course_summary 
+GROUP BY module_presentation_length
+ORDER BY count DESC;
+
+SELECT 
+    num_of_prev_attempts, 
+    COUNT(*) AS count,
+    ROUND(100.0 * COUNT(*) / (SELECT COUNT(*) FROM course_summary), 2) AS percentage
+FROM course_summary 
+GROUP BY num_of_prev_attempts
+ORDER BY count DESC;
+
+
